@@ -1,12 +1,12 @@
 let explelist = document.querySelector(`#exploreList`);
 let anime = []; // Store anime as a global variable since we always need it
-fetch("https://api.jikan.moe/v3/search/anime?q=naruto")
+fetch("")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
     anime = data.results; // populate anime array here when loading them
     data.results.forEach((anime) => renderAnimes(anime));
-  });
+});
 let tvButton = document.querySelector(`#tvButton`);
 tvButton.addEventListener(`click`, () => {
   explelist.innerHTML = " "; // clear out the html inside here
