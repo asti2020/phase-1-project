@@ -1,6 +1,6 @@
 let explelist = document.querySelector(`#exploreList`);
 let anime = []; // Store anime as a global variable since we always need it
-fetch("")
+fetch("https://api.jikan.moe/v3/search/anime?q=naruto")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
